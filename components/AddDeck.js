@@ -40,6 +40,12 @@ class AddDeck extends Component {
     //Save to AsyncStorage
     saveDeck(deck);
 
+    //Route to deck view
+    this.props.navigation.navigate("DeckDetail", {
+      deckId: deck.id,
+      name: deck.name
+    });
+
     //Reset input
     this.setState(() => ({
       input: ""
